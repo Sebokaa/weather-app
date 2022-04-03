@@ -1,0 +1,150 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  /* background-image: url('https://source.unsplash.com/1920x1080/?landscape'); */
+  background-color: black;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.backgroundImage {
+  background-image: url('https://wallpaperaccess.com/full/359095.jpg');
+  filter: blur(10px);
+  height: 120%;
+  width: 120%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-container {
+  background-image: url('https://wallpaperaccess.com/full/359095.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2em;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 650px;
+  max-height: 580px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow:0px 0px 20px #000000;
+}
+
+@media (max-width: 500px) {
+  .card-container {
+    background-image: none;
+  }
+
+  .backgroundImage {
+    filter: blur(0px);
+  }
+
+  .search {
+    margin-top: -20px;
+  }
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding-right: 2em;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  border-radius: 5px;
+  width: 50%;
+  background-color: RGB(0, 0, 0, 0.5);
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+input.search-bar:hover {
+  background-color: RGB(0, 0, 0, 0.7);
+}
+input.search-bar:focus {
+  background-color: RGB(0, 0, 0, 0.7);
+}
+
+.but {
+  margin-left: -4em;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  height: 4.5em;
+  width: 4.5em;
+  color: white;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+svg {
+  font-size: 27px;
+}
+
+.description {
+  font-size: 25px;
+  text-transform: capitalize;
+  padding-bottom: 50px;
+}
+
+.Humidity {
+  font-size: 25px;
+  padding: 5px;
+}
+
+.wind {
+  font-size: 25px;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading ...";
+  color: white;
+  position: absolute;
+  top: 0;
+}
